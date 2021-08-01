@@ -1,0 +1,5 @@
+host='127.0.0.1'
+user='root'
+password='SearchmapDB2021!'
+database='db_fesel'
+auth_plugin='mysql_native_password'
