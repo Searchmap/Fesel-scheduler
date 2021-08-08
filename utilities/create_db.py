@@ -1,18 +1,10 @@
-import db_config.config as cfg
+from db_config.connection import connect, deconnect
 
-import mysql.connector
-
-db = mysql.connector.connect(
-		host=cfg.host,
-		user=cfg.user,
-		passwd=cfg.password,
-		auth_plugin=cfg.auth_plugin
-	)
-
+db = connect()
 cursor = db.cursor()
 
-with open('./utilities/db.sql', 'r') as f:
+with open('utilities/db.sql', 'r') as f:
 	cursor.execute(f.read(), multi=True)
 	db.commit()
 
-cursor.close()
+deconnect(db, cursor)

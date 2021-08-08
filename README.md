@@ -50,6 +50,7 @@ It contains the :
 ```
 
 # execution
+* Put your mysql-server username and password in db_config/config.py
 ```bash
     python -m utilities.generate_public
     python -m utilities.create_db
