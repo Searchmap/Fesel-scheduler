@@ -40,6 +40,26 @@ CREATE TABLE IF NOT EXISTS `Media`
 	PRIMARY KEY(`media_id`)
 );
 
+CREATE TABLE IF NOT EXISTS `Passenger`
+(
+	`passenger_id` INT NOT NULL AUTO_INCREMENT,
+	`passenger_gender` VARCHAR(30),
+	`passenger_age` VARCHAR(30),
+	`passenger_skin` VARCHAR(30),
+	PRIMARY KEY(`passenger_id`)
+);
+
+/*CREATE TABLE IF NOT EXISTS `Seenby`
+(
+	`passenger_id` INT NOT NULL AUTO_INCREMENT,
+	`passenger_gender` VARCHAR(30),
+	`passenger_age` VARCHAR(30),
+	`passenger_skin` VARCHAR(30),
+	FOREIGN KEY (`passenger_id`) REFERENCES Passenger(`passenger_id`),
+	FOREIGN KEY (`media_id`) REFERENCES Media(`media_id`),
+	PRIMARY KEY(`passenger_id`, `media_id`)
+);*/
+
 
 /****************************************
  * DATA INSERTION

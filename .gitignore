@@ -4,10 +4,12 @@ __pycache__/
 *$py.class
 
 # local directories
-source/
 
 # C extensions
 *.so
+
+# pkl extensions
+*.pkl
 
 # Distribution / packaging
 .Python
