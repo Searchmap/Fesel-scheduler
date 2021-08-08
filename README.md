@@ -38,10 +38,9 @@ It contains the :
 
 # installation
 ```bash
-    git clone https://github.com/Metsearch/multimodal-hand-gesture-recognition
-    cd multimodal-hand-gesture-recognition
-    git checkout -b develop
-    git pull origin develop
+    git clone https://github.com/searchmapai/fesel-scheduler
+    cd fesel-scheduler
+    git checkout develop
     git checkout features/your_features_name
     python -m venv env
     source env/bin/activate
@@ -50,9 +49,21 @@ It contains the :
 ```
 
 # execution
-* Put your mysql-server username and password in db_config/config.py
+* Create database
+    * Put your mysql-server username and password in db_config/config.py
+    * Activate mysql-server
+    ```bash
+        mysql -u root -p
+    ```  
+    * Create the database
+    ```bash
+        source utilities/db.sql
+    ```
+* Generate Passengers
 ```bash
     python -m utilities.generate_public
-    python -m utilities.create_db
+```
+* Execute the scheduler
+```bash
     pythin -m processing.process
 ```
